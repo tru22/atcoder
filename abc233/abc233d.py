@@ -1,14 +1,16 @@
+from collections import defaultdict
+
 N, K = map(int, input().split())
 numbers = list(map(int, input().split()))
-cumsum = [numbers[0]]
+cumsum = [0]
 
-for i in range(N - 1):
-    cumsum.append(cumsum[i] + numbers[i + 1])
-
-count = 0
 for i in range(N):
-    for j in range(i + 1):
-        if cumsum[i] - cumsum[j] == K:
-            count += 1
+    cumsum.append(cumsum[i] + numbers[i])
 
-print(count)
+print(numbers)
+print(cumsum)
+mp = defaultdict(int)
+for i in range(0, N + 1):
+    mp[cumsum[i]] += 1
+
+print(mp)
