@@ -1,0 +1,12 @@
+N, Q = map(int, input().split())
+
+numbers = list(map(int, input().split()))
+
+queryDic = dict()
+for i in range(Q):
+    value, key = mp(int, input().split())
+    queryDic[
+
+
+for i in range(Q):
+    
