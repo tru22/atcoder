@@ -1,0 +1,2 @@
+rowNum = int(input())
+
