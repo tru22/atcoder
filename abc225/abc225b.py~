@@ -1,0 +1,7 @@
+N = int(input())
+graph = []
+
+for i in range(N):
+    graph.append(list(map(int, input())))
+
+print(graph)
